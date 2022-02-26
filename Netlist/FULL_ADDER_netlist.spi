@@ -1,0 +1,89 @@
+*  Generated for: PrimeSim
+*  Design library name: CSA
+*  Design cell name: test_Full_Adder
+*  Design view name: schematic
+.lib 'saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Wed Feb 23 18:28:53 2022
+
+.global gnd!
+********************************************************************************
+* Library          : CSA
+* Cell             : inverter
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt inverter net3 net7 net8 net9
+xm0 net7 net8 net3 net3 n105 w=0.1u l=0.03u nf=1 m=1
+xm1 net7 net8 net9 net9 p105 w=0.1u l=0.03u nf=1 m=1
+.ends inverter
+
+********************************************************************************
+* Library          : CSA
+* Cell             : FA
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt fa a b carry cin gnd_1 sum vdc1 vdc2
+xi7 gnd_1 net67 net75 vdc2 inverter
+xi6 gnd_1 net52 cin vdc2 inverter
+xi1 gnd_1 net24 b vdc1 inverter
+xi0 gnd_1 net22 a vdc1 inverter
+xm14 b net67 carry gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm13 cin net75 carry gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm9 net52 net75 sum gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm12 cin net67 sum gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm3 net24 a net75 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm2 b net22 net75 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm16 b net75 carry vdc2 p105 w=0.1u l=0.03u nf=1 m=1
+xm15 cin net67 carry vdc2 p105 w=0.1u l=0.03u nf=1 m=1
+xm11 net52 net67 sum vdc2 p105 w=0.1u l=0.03u nf=1 m=1
+xm10 cin net75 sum vdc2 p105 w=0.1u l=0.03u nf=1 m=1
+xm5 net24 net22 net75 vdc1 p105 w=0.1u l=0.03u nf=1 m=1
+xm4 b a net75 vdc1 p105 w=0.1u l=0.03u nf=1 m=1
+.ends fa
+
+********************************************************************************
+* Library          : CSA
+* Cell             : test_Full_Adder
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi10 a b carry c gnd! sum net17 net17 fa
+v1 net17 gnd! dc=0.8
+v4 b gnd! dc=0 pulse ( 1.2 0 0 .1u .1u 10u 20u )
+v3 c gnd! dc=0 pulse ( 1.20 0 0u .1u .1u 20u 40u )
+v2 a gnd! dc=0 pulse ( 0 1.2 0 .1u .1u 5u 10u )
+
+
+
+
+
+
+
+
+.tran '1u' '200u' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(a) v(b) v(c) v(carry) v(sum)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
