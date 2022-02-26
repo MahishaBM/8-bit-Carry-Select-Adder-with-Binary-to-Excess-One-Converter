@@ -15,8 +15,8 @@ This repository presents the design of 8 bit Carry Select Adder with Binary to E
 * [ 8 bit Carry Select Adder](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#8-bit-carry-select-adder)<br/>
 * [Testbench schematics of 8 bit Carry Select Adder with Binary to Excess one converter](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#testbench-schematics-of-8-bit-carry-select-adder-with-binary-to-excess-one-converter)<br/>
 * [Simulation result](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#simulation-result)<br/>
-* [Transistor count for easc block](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/blob/main/README.md#transistor-count-for-each-block)<br/>
-* [Total transistor count for 8 bit CSA with binary to excess one converter]()<br/>
+* [Transistor count for each block](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/blob/main/README.md#transistor-count-for-each-block)<br/>
+* [Total transistor count for 8 bit CSA with binary to excess one converter](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#total-transistor-count-for-8-bit-csa-with-binary-to-excess-one-converter)<br/>
 * [Netlist](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#netlist)<br/>
 * [Author](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#author)<br/>
 * [Acknowledgements](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#acknowledgements-)<br/>
@@ -27,9 +27,9 @@ Addition is a back bone of arithmetic unit and computer arithmetic. Addition in 
 ![CSA (1)](https://user-images.githubusercontent.com/88282645/155842219-7aa47b1e-9c51-4073-b3c5-e7934c563833.jpg)<br/>
 In 8-bit carry select adder the adder is split into two blocks they are upper bits addition and lower bits addition. Lower bits addition block will do 4 bit addition using 4-bit ripple carry adder. Four full adders present inside the 4 bit Ripple Carry Adder block,it is implemented using transmission gate logic. The upper bits addition are done in two form, one is with carry in as 0 and the other is with carry is as 1. The upper bits addition with carry is equal to 0 is done using 4 bit ripple carry adder and the output is given as input to 2:1 mux where is input propagate to output  when selection signal is zero. Upper bits addition with carry is equal to 1 is done using Binary to Excess one converter. The input for binary to excess one converter is taken from the output bits of 4 bit upper bit adder block and the output of binary to excess one converter block is given as  input to 2:1 mux when selection signal is 1 one this input will appear at output. The selection signal for the block with array of mux is the C1 signal, it is a carry out signal from 4-bits lower bit adder block. Mux is designed using Transmission gate logic.<br/>
 # Tool used<br/>
-/*Synopsys Custom Compiler*/:  The Synopsys Custom Compiler™ design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. As the heart of the Synopsys Custom Design Platform, Custom Compiler provides design entry, simulation management and analysis, and custom layout editing features. This tool was used to design the circuit on a transistor level.<br/>
-/*Synopsys Primewave*/:  PrimeWave™ Design Environment is a comprehensive and flexible environment for simulation setup and analysis of analog, RF, mixed-signal design, custom-digital and memory designs within the Synopsys Custom Design Platform. This tool helped in various types of simulations of the above designed circuit.<br/>
-/*Synopsys 28nm PDK*/:  The Synopsys 28nm Process Design Kit(PDK) was used in creation and simulation of the above designed circuit.<br/>
+*Synopsys Custom Compiler*:  The Synopsys Custom Compiler™ design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. As the heart of the Synopsys Custom Design Platform, Custom Compiler provides design entry, simulation management and analysis, and custom layout editing features. This tool was used to design the circuit on a transistor level.<br/>
+*Synopsys Primewave*:  PrimeWave™ Design Environment is a comprehensive and flexible environment for simulation setup and analysis of analog, RF, mixed-signal design, custom-digital and memory designs within the Synopsys Custom Design Platform. This tool helped in various types of simulations of the above designed circuit.<br/>
+*Synopsys 28nm PDK*:  The Synopsys 28nm Process Design Kit(PDK) was used in creation and simulation of the above designed circuit.<br/>
 # Inverter<br/>
 Inverter schematics<br/>
 ![inverter_schematics](https://user-images.githubusercontent.com/88282645/155843016-757bf8be-9596-479e-802b-8be4e05b59f1.png)<br/>
@@ -96,10 +96,10 @@ Block name                              -  Transistor Count<br/>
 [4bit Binary to excess one Converter](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#4bit_btoe1converter) -  38<br/>
 # Total transistor count for 8 bit CSA with binary to excess one converter<br/>
 Block name - Number of BLock - Tansistor count - Transistor count for N block<br/>
-4_bit RCA   - 2 - 80 - 160<br/>
-4bit_BtoE1  - 1 - 38 -  38<br/>
+4_bit RCA - 2 - 80 - 160<br/>
+4bit_BtoE1 - 1 - 38 - 38<br/>
 Array of 5 2:1 MUX - 5 - 6 - 30<br/>
-/* Total transisitor count*/ : 160+38+30=228<br/>
+***Total transisitor count*** : **160+38+30=228**<br/>
 # Netlist<br/>
 You can view the circuit netlists [here](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/tree/main/Netlist)<br/>
 # Author<br/>
