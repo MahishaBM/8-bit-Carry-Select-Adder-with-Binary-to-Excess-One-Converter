@@ -1,0 +1,109 @@
+*  Generated for: PrimeSim
+*  Design library name: CSA
+*  Design cell name: test_4bit_RCA
+*  Design view name: schematic
+.lib 'saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Fri Feb 25 17:39:18 2022
+
+.global gnd!
+********************************************************************************
+* Library          : CSA
+* Cell             : inverter
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt inverter in out vdc gnd_1
+xm0 out in gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm1 out in vdc vdc p105 w=0.1u l=0.03u nf=1 m=1
+.ends inverter
+
+********************************************************************************
+* Library          : CSA
+* Cell             : FA
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt fa a b carry cin gnd_1 sum vdc1 vdc2
+xi7 net75 net67 vdc2 gnd_1 inverter
+xi6 cin net52 vdc2 gnd_1 inverter
+xi1 b net24 vdc1 gnd_1 inverter
+xi0 a net22 vdc1 gnd_1 inverter
+xm14 b net67 carry gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm13 cin net75 carry gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm9 net52 net75 sum gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm12 cin net67 sum gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm3 net24 a net75 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm2 b net22 net75 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm16 b net75 carry vdc2 p105 w=0.1u l=0.03u nf=1 m=1
+xm15 cin net67 carry vdc2 p105 w=0.1u l=0.03u nf=1 m=1
+xm11 net52 net67 sum vdc2 p105 w=0.1u l=0.03u nf=1 m=1
+xm10 cin net75 sum vdc2 p105 w=0.1u l=0.03u nf=1 m=1
+xm5 net24 net22 net75 vdc1 p105 w=0.1u l=0.03u nf=1 m=1
+xm4 b a net75 vdc1 p105 w=0.1u l=0.03u nf=1 m=1
+.ends fa
+
+********************************************************************************
+* Library          : CSA
+* Cell             : 4bit_RCA
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt _4bit_rca a0 a1 a2 a3 b0 b1 b2 b3 cin cout gnd_1 s0 s1 s2 s3 vdc
+xi3 a3 b3 cout net25 gnd_1 s3 vdc vdc fa
+xi2 a2 b2 net25 net17 gnd_1 s2 vdc vdc fa
+xi1 a1 b1 net17 net9 gnd_1 s1 vdc vdc fa
+xi0 a0 b0 net9 cin gnd_1 s0 vdc vdc fa
+.ends _4bit_rca
+
+********************************************************************************
+* Library          : CSA
+* Cell             : test_4bit_RCA
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi0 a0 a1 a2 a3 b0 b1 b2 b3 gnd! cout gnd! s0 s1 s2 s3 net18 _4bit_rca
+v2 net18 gnd! dc=0.8
+v11 b0 gnd! dc=0 pulse ( 0 1.2 0 .1u .1u 40u 80u )
+v9 b3 gnd! dc=0 pulse ( 0 1.2 0 .1u .1u 320u 640u )
+v8 b2 gnd! dc=0 pulse ( 0 1.2 0 .1u .1u 160u 320u )
+v7 b1 gnd! dc=0 pulse ( 0 1.2 0 .1u .1u 80u 160u )
+v6 a3 gnd! dc=0 pulse ( 0 1.2 0 .1u .1u 20u 40u )
+v5 a2 gnd! dc=0 pulse ( 0 1.2 0 .1u .1u 10u 20u )
+v4 a1 gnd! dc=0 pulse ( 0 1.20 0 .1u .1u 5u 10u )
+v3 a0 gnd! dc=0 pulse ( 0 1.2 0 .1u .1u 2.5u 5u )
+
+
+
+
+
+
+
+
+.tran '1u' '400u' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(a0) v(a1) v(a2) v(a3) v(b0) v(b1) v(b2) v(b3) v(cout) v(s0) v(s1)
++ v(s2) v(s3)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
