@@ -62,6 +62,18 @@ MUX_Array_Symbol<br/>
 ![CSA_Symbol](https://user-images.githubusercontent.com/88282645/155843740-fd6a5398-eef5-4e22-ae3f-4108853f611e.png)<br/>
 # Testbench schematics of 8 bit Carry Select Adder with Binary to Excess one converter<br/>
 ![Test_8bit_CSA](https://user-images.githubusercontent.com/88282645/155844102-114a6a32-ad96-4ed9-abb1-b91475d32492.png)<br/>
+# Simulation result<br/>
+8 bit input A<br/>
+![8bit_csa(Ain)](https://user-images.githubusercontent.com/88282645/155845741-418740b2-d62a-4987-95d4-56ccf0be681e.png)<br/>
+8 bit input B<br/>
+![8bit_csa(Bin)](https://user-images.githubusercontent.com/88282645/155845754-3e8f63c0-198a-4e2e-a2a9-3f694773addf.png)<br/>
+8 bit Sum and 1 bit Cout<br/>
+![8bit_csa(result)](https://user-images.githubusercontent.com/88282645/155845755-388a555d-b946-4bca-91c8-63faa82b545b.png)<br/>
+# Author<br/>
+Mahisha B M, BE in Electronic and Communication Engineering at R. M. K. Engineering College, Thiruvallur-601206<br/>
+# Acknowledgements <br/>
+
+
 
 
 
