@@ -29,7 +29,7 @@ In 8-bit carry select adder the adder is split into two blocks they are upper bi
 # Tool used<br/>
 *Synopsys Custom Compiler*:  The Synopsys Custom Compiler™ design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. As the heart of the Synopsys Custom Design Platform, Custom Compiler provides design entry, simulation management and analysis, and custom layout editing features. This tool was used to design the circuit on a transistor level.<br/>
 *Synopsys Primewave*:  PrimeWave™ Design Environment is a comprehensive and flexible environment for simulation setup and analysis of analog, RF, mixed-signal design, custom-digital and memory designs within the Synopsys Custom Design Platform. This tool helped in various types of simulations of the above designed circuit.<br/>
-*Synopsys 28nm PDK*:  The Synopsys 28nm Process Design Kit(PDK) was used in creation and simulation of the above designed circuit.<br/>
+*Synopsys 28nm PDK*:  The Synopsys 28nm Process Design Kit(PDK) was used in creation and simulation of the above circuit design.<br/>
 # Inverter<br/>
 Inverter schematics<br/>
 ![inverter_schematics](https://user-images.githubusercontent.com/88282645/155843016-757bf8be-9596-479e-802b-8be4e05b59f1.png)<br/>
