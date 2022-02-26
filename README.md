@@ -1,6 +1,23 @@
 # 8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter <br/>
 This repository presents the design of 8 bit Carry Select Adder with Binary to Excess one Converter. It is implemented on Synopsys Custom Compiler in 28nm technology node.<br/>
 # Table Of Content <br/>
+* [Abstract](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#abstract-)<br/>
+* [Detailed Explanation with reference Block diagram](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#detailed-explanation-with-reference-block-diagram)<br/>
+* [Tool used](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#tool-used)<br/>
+* [Inverter](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#inverter)<br/>
+* [AND](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#and-)<br/>
+* [XOR implementation using Transmission logic](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#xor-implementation-using-transmission-logic-)<br/>
+* [Full adder implementation using Transmission logic](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#full-adder-implementation-using-transmission-logic-)<br/>
+* [4 bit Ripple Carry Adder](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#4-bit-ripple-carry-adder)<br/>
+* [ 2:1 MUX implementation using Transmission logic](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#21-mux-implementation-using-transmission-logic)<br/>
+* [Array of 5 2:1 MUX](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#array-of-5-21-mux)<br/>
+* [4bit_BtoE1converter](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#4bit_btoe1converter)<br/>
+* [ 8 bit Carry Select Adder](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#8-bit-carry-select-adder)<br/>
+* [Testbench schematics of 8 bit Carry Select Adder with Binary to Excess one converter](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#testbench-schematics-of-8-bit-carry-select-adder-with-binary-to-excess-one-converter)<br/>
+* [Simulation result](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#simulation-result)<br/>
+* [Author](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#author)<br/>
+* [Acknowledgements](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#acknowledgements-)<br/>
+* [Reference](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#reference-)<br/>
 # Abstract <br/>
 Addition is a back bone of arithmetic unit and computer arithmetic. Addition in arithmetic is often the work house of computational unit. There are different type of adder present in vlsi design, they are ripple carry adder, carry look ahead adder, carry select adder. This paper presents idea about the design of 8 bit carry select adder with binary to excess one converter. The design is implemented using Synopsys tool using 28 nm technology node. This design consist of 3 different block they are array of 2:1 multiplexer, 4 bit binary to excess one converter and 4 bit ripple carry adder. The presented design decreases the computational time and increases the speed when compared to ripple carry adder.<br/>
 # Detailed Explanation with reference block diagram<br/>
@@ -72,7 +89,8 @@ MUX_Array_Symbol<br/>
 # Author<br/>
 Mahisha B M, BE in Electronic and Communication Engineering at R. M. K. Engineering College, Thiruvallur-601206<br/>
 # Acknowledgements <br/>
-
+# Reference <br/>
+http://www.ijeert.org/pdf/v2-i6/25.pdf <br/>
 
 
 
