@@ -15,6 +15,7 @@ This repository presents the design of 8 bit Carry Select Adder with Binary to E
 * [ 8 bit Carry Select Adder](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#8-bit-carry-select-adder)<br/>
 * [Testbench schematics of 8 bit Carry Select Adder with Binary to Excess one converter](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#testbench-schematics-of-8-bit-carry-select-adder-with-binary-to-excess-one-converter)<br/>
 * [Simulation result](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#simulation-result)<br/>
+* [Netlist]()<br/>
 * [Author](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#author)<br/>
 * [Acknowledgements](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#acknowledgements-)<br/>
 * [Reference](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#reference-)<br/>
