@@ -1,0 +1,78 @@
+*  Generated for: PrimeSim
+*  Design library name: CSA
+*  Design cell name: test_MUX
+*  Design view name: schematic
+.lib 'saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Sun Feb 20 16:37:46 2022
+
+.global gnd!
+********************************************************************************
+* Library          : CSA
+* Cell             : inverter
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt inverter net3 net7 net8 net9
+xm0 net7 net8 net3 net3 n105 w=0.1u l=0.03u nf=1 m=1
+xm1 net7 net8 net9 net9 p105 w=0.1u l=0.03u nf=1 m=1
+.ends inverter
+
+********************************************************************************
+* Library          : CSA
+* Cell             : 2:1_MUX
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt _2:1_mux in1 in2 out signal vdc gnd_1
+xm1 in2 signal out gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm0 in1 net10 out gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm3 in1 signal out vdc p105 w=0.1u l=0.03u nf=1 m=1
+xm2 in2 net10 out net24 p105 w=0.1u l=0.03u nf=1 m=1
+xi4 gnd_1 net10 signal vdc inverter
+.ends _2:1_mux
+
+********************************************************************************
+* Library          : CSA
+* Cell             : test_MUX
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi7 a b out net13 net8 gnd! _2:1_mux
+v6 net8 gnd! dc=0.8
+v5 net13 gnd! dc=0 pulse ( 0 1.20 0 0.1u 0.1u 20u 40u )
+v4 b gnd! dc=0 pulse ( 1.2 0 0 0.1u 0.1u 10u 20u )
+v3 a gnd! dc=0 pulse ( 0 1.2 0 0.1u 0.1u 5u 10u )
+
+
+
+
+
+
+
+
+.tran '1u' '200u' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(a) v(b) v(out) v(net13)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
