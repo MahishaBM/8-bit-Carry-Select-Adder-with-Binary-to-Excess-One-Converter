@@ -1,0 +1,109 @@
+*  Generated for: PrimeSim
+*  Design library name: CSA
+*  Design cell name: test_BtoE1
+*  Design view name: schematic
+.lib 'saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Thu Feb 24 17:42:46 2022
+
+.global gnd!
+********************************************************************************
+* Library          : CSA
+* Cell             : inverter
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt inverter in out vdc gnd_1
+xm0 out in gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm1 out in vdc vdc p105 w=0.1u l=0.03u nf=1 m=1
+.ends inverter
+
+********************************************************************************
+* Library          : CSA
+* Cell             : XOR
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt xor a b gnd_1 out vdc
+xm1 a net10 out gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm0 net12 b out gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm3 a b out vdc p105 w=0.1u l=0.03u nf=1 m=1
+xm2 net12 net10 out vdc p105 w=0.1u l=0.03u nf=1 m=1
+xi5 b net10 vdc gnd_1 inverter
+xi4 a net12 vdc gnd_1 inverter
+.ends xor
+
+********************************************************************************
+* Library          : CSA
+* Cell             : 2_input_AND
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt _2_input_and a b gnd_1 out vdc
+xi5 b net18 vdc gnd_1 inverter
+xm3 out b a gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm4 out net18 b gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+.ends _2_input_and
+
+********************************************************************************
+* Library          : CSA
+* Cell             : BtoE1
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt btoe1 p0 p1 p2 p3 q0 q1 q2 q3 vdc gnd_1
+xi0 p0 q0 vdc gnd_1 inverter
+xi3 net33 p3 gnd_1 q3 vdc xor
+xi2 p0 p1 gnd_1 q1 vdc xor
+xi1 net28 p2 gnd_1 q2 vdc xor
+xi5 net28 p2 gnd_1 net33 vdc _2_input_and
+xi4 p0 p1 gnd_1 net28 vdc _2_input_and
+.ends btoe1
+
+********************************************************************************
+* Library          : CSA
+* Cell             : test_BtoE1
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi0 net14 net16 p2 p3 q0 q1 q2 q3 net12 gnd! btoe1
+v2 net12 gnd! dc=0.8
+v6 p3 gnd! dc=0 pulse ( 0 01.2 0 .1u .1u 20u 40u )
+v5 p2 gnd! dc=0 pulse ( 0 1.2 0 .1u .1u 10u 20u )
+v4 net16 gnd! dc=0 pulse ( 0 1.2 0 .1u .1u 5u 10u )
+v3 net14 gnd! dc=0 pulse ( 0 1.2 0 .1u .1u 2.5u 5u )
+
+
+
+
+
+
+
+
+.tran '1u' '200u' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(net14) v(net16) v(p2) v(p3) v(q0) v(q1) v(q2) v(q3)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
