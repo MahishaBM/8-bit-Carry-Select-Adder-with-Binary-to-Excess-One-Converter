@@ -89,6 +89,9 @@ MUX_Array_Symbol<br/>
 # Author<br/>
 Mahisha B M, BE in Electronic and Communication Engineering at R. M. K. Engineering College, Thiruvallur-601206<br/>
 # Acknowledgements <br/>
+[Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/)<br/>
+[Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)<br/>
+[Synopsys India](https://www.synopsys.com/)<br/>
 # Reference <br/>
 http://www.ijeert.org/pdf/v2-i6/25.pdf <br/>
 
