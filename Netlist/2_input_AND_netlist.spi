@@ -1,0 +1,75 @@
+*  Generated for: PrimeSim
+*  Design library name: CSA
+*  Design cell name: test_and
+*  Design view name: schematic
+.lib 'saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Sun Feb 20 17:26:04 2022
+
+.global gnd!
+********************************************************************************
+* Library          : CSA
+* Cell             : inverter
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt inverter net3 net7 net8 net9
+xm0 net7 net8 net3 net3 n105 w=0.1u l=0.03u nf=1 m=1
+xm1 net7 net8 net9 net9 p105 w=0.1u l=0.03u nf=1 m=1
+.ends inverter
+
+********************************************************************************
+* Library          : CSA
+* Cell             : 2_input_AND
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt _2_input_and a b gnd_1 out vdc
+xi5 gnd_1 net18 b vdc inverter
+xm4 out net18 b gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm3 out b a gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+.ends _2_input_and
+
+********************************************************************************
+* Library          : CSA
+* Cell             : test_and
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi5 a b gnd! out net7 _2_input_and
+v2 net7 gnd! dc=0.8
+v3 a gnd! dc=0 pulse ( 0 1.2 0 .1u .1u 10u 20u )
+v4 b gnd! dc=0 pulse ( 1.20 0 0 0.1u 0.1u 5u 10u )
+
+
+
+
+
+
+
+
+.tran '1u' '200u' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(a) v(b) v(out)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
