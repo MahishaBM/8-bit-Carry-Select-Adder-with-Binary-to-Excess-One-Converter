@@ -23,15 +23,15 @@ Inverter Symbol<br/>
 # AND <br/>
 AND_Schematics<br/>
 ![AND_Schematics](https://user-images.githubusercontent.com/88282645/155843164-880c67c4-7375-4c1a-ac7a-8e0a8e85d417.png)<br/>
-AND_Symbol
+AND_Symbol<br/>
 ![AND_Symbol](https://user-images.githubusercontent.com/88282645/155843165-88554318-3bdf-4a25-9c30-f8cc871c025e.png)<br/>
 # XOR implementation using Transmission logic <br/>
 XOR_schematics<br/>
 ![XOR_schematics (1)](https://user-images.githubusercontent.com/88282645/155843320-fef492f4-77cd-4f00-9dc0-60f12671a441.png)<br/>
 XOR_Symbol<br/>
-![XOR_Symbol](https://user-images.githubusercontent.com/88282645/155843321-400167f9-a914-45b0-aa3e-85b550540c07.png)<br/r>
+![XOR_Symbol](https://user-images.githubusercontent.com/88282645/155843321-400167f9-a914-45b0-aa3e-85b550540c07.png)<br/>
 # Full adder implementation using Transmission logic <br/>
-FA_Schematics,br/>
+FA_Schematics<br/>
 ![FA_Schematics](https://user-images.githubusercontent.com/88282645/155843412-c6b9d881-4df1-4882-b2ed-0995cc03e5e8.png)<br/>
 FA_Symbol<br/>
 ![FA_Symbol](https://user-images.githubusercontent.com/88282645/155843416-c57017f4-8a39-4667-97e7-5c16dbe04b31.png)<br/>
