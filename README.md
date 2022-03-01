@@ -112,7 +112,7 @@ Block name - Number of BLock - Tansistor count - Transistor count for N block<br
 Array of 5 2:1 MUX - 5 - 6 - 30<br/>
 ***Total transisitor count*** : **160+38+30=228**<br/>
 # Transistor and power comparison
-***Implsementented design*** - ***Transistor count*** - ***Power***<br/>
+***Implementented design*** - ***Transistor count*** - ***Power***<br/>
 *8bit_CSA_with_BtoE_converter* - *228* - *78.4 nW*<br/>
 ***Reference design*** - ***Transistor count*** - ***Power***[1]<br/>
 *8bit_CSA_without_BtoE_converter*-*246* - 13.77uW<br/>
