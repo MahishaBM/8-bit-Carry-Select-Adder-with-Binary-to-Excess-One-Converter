@@ -88,7 +88,9 @@ MUX_Array_Symbol<br/>
 ***Average Current in implemented circuit***<br/>
 ![cal](https://user-images.githubusercontent.com/88282645/156199559-9a496106-1ddc-4f8e-b6e4-ffdfe7b3e3fe.png)<br/>
 ![test_window](https://user-images.githubusercontent.com/88282645/156199565-ee5d9af7-b2be-4087-8d34-f096ff24e560.png)<br/>
-*Average currten: 98 n amps*
+* Average currten: 98 n amps<br/>
+Dc voltage supplied: 0.8 V<br/>
+power=I(avg)*V(v)=98^-9 * 0.8=78.4 nW*<br/>
 
 # Transistor Count for each block<br/>
 Block name                              -  Transistor Count<br/>
