@@ -18,7 +18,7 @@ This repository presents the design of 8 bit Carry Select Adder with Binary to E
 * [Power calculation in implemented model](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#power-calculation-in-implemented-model)<br/>
 * [Transistor count for each block](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/blob/main/README.md#transistor-count-for-each-block)<br/>
 * [Total transistor count for 8 bit CSA with binary to excess one converter](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#total-transistor-count-for-8-bit-csa-with-binary-to-excess-one-converter)<br/>
-* [Transistor and power comparison](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#transistor-and-power-comparison)<br/>
+* [Transistor count and power comparison](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#transistor-and-power-comparison)<br/>
 * [Netlist](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#netlist)<br/>
 * [Author](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#author)<br/>
 * [Acknowledgements](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#acknowledgements-)<br/>
@@ -48,6 +48,8 @@ XOR_schematics<br/>
 XOR_Symbol<br/>
 ![XOR_Symbol](https://user-images.githubusercontent.com/88282645/155843321-400167f9-a914-45b0-aa3e-85b550540c07.png)<br/>
 # Full adder implementation using Transmission logic <br/>
+Reference Diagram<br/>
+![FA(CSA)](https://user-images.githubusercontent.com/88282645/156205714-3cdb6467-4b0b-4587-974e-90cebf7ee586.png)<br/>
 FA_Schematics<br/>
 ![FA_Schematics](https://user-images.githubusercontent.com/88282645/155843412-c6b9d881-4df1-4882-b2ed-0995cc03e5e8.png)<br/>
 FA_Symbol<br/>
@@ -105,13 +107,14 @@ Block name                              -  Transistor Count<br/>
 [Full adder](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#full-adder-implementation-using-transmission-logic-)                          -  20<br/>
 [4 bit RCA](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#4-bit-ripple-carry-adder)                           -  80<br/>
 [4bit Binary to excess one Converter](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#4bit_btoe1converter) -  38<br/>
+# Result ###<br/>
 # Total transistor count for 8 bit CSA with binary to excess one converter<br/>
 Block name - Number of BLock - Tansistor count - Transistor count for N block<br/>
 4_bit RCA - 2 - 80 - 160<br/>
 4bit_BtoE1 - 1 - 38 - 38<br/>
 Array of 5 2:1 MUX - 5 - 6 - 30<br/>
 ***Total transisitor count*** : **160+38+30=228**<br/>
-# Transistor and power comparison
+# Transistor cout and power comparison
 ***Implementented design*** - ***Transistor count*** - ***Power***<br/>
 *8bit_CSA_with_BtoE_converter* - *228* - *78.4 nW*<br/>
 ***Reference design*** - ***Transistor count*** - ***Power***[1]<br/>
