@@ -81,10 +81,15 @@ MUX_Array_Symbol<br/>
 8 bit input A<br/>
 ![8bit_csa(Ain)](https://user-images.githubusercontent.com/88282645/155845741-418740b2-d62a-4987-95d4-56ccf0be681e.png)<br/>
 8 bit input B<br/>
-![8bit_csa(Bin)](![8bit_csa(Bin)](https://user-images.githubusercontent.com/88282645/156198881-8ce77340-d317-4f0b-b592-aac24c0bd69f.png))<br/>
+![8bit_csa(Bin)](https://user-images.githubusercontent.com/88282645/156198881-8ce77340-d317-4f0b-b592-aac24c0bd69f.png)<br/>
 8 bit Sum and 1 bit Cout<br/>
-![8bit_csa(result)](![8bit_csa(result)](https://user-images.githubusercontent.com/88282645/156198892-ffab5e79-7809-46d7-9cfb-9b914a00b993.png)
-)<br/>
+
+![8bit_csa(result)](https://user-images.githubusercontent.com/88282645/156198892-ffab5e79-7809-46d7-9cfb-9b914a00b993.png)<br/>
+***Average Current in implemented circuit***<br/>
+![cal](https://user-images.githubusercontent.com/88282645/156199559-9a496106-1ddc-4f8e-b6e4-ffdfe7b3e3fe.png)<br/>
+![test_window](https://user-images.githubusercontent.com/88282645/156199565-ee5d9af7-b2be-4087-8d34-f096ff24e560.png)<br/>
+*Average currten: 98 n amps*
+
 # Transistor Count for each block<br/>
 Block name                              -  Transistor Count<br/>
 [Inverter](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#inverter)                            -  2<br/>
