@@ -15,8 +15,10 @@ This repository presents the design of 8 bit Carry Select Adder with Binary to E
 * [ 8 bit Carry Select Adder](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#8-bit-carry-select-adder)<br/>
 * [Testbench schematics of 8 bit Carry Select Adder with Binary to Excess one converter](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#testbench-schematics-of-8-bit-carry-select-adder-with-binary-to-excess-one-converter)<br/>
 * [Simulation result](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#simulation-result)<br/>
+* [Power calculation in implemented model](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#power-calculation-in-implemented-model)<br/>
 * [Transistor count for each block](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/blob/main/README.md#transistor-count-for-each-block)<br/>
 * [Total transistor count for 8 bit CSA with binary to excess one converter](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#total-transistor-count-for-8-bit-csa-with-binary-to-excess-one-converter)<br/>
+* [Transistor and power comparison](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#transistor-and-power-comparison)<br/>
 * [Netlist](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#netlist)<br/>
 * [Author](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#author)<br/>
 * [Acknowledgements](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#acknowledgements-)<br/>
@@ -88,6 +90,7 @@ MUX_Array_Symbol<br/>
 ***Average Current in implemented circuit***<br/>
 ![cal](https://user-images.githubusercontent.com/88282645/156199559-9a496106-1ddc-4f8e-b6e4-ffdfe7b3e3fe.png)<br/>
 ![test_window](https://user-images.githubusercontent.com/88282645/156199565-ee5d9af7-b2be-4087-8d34-f096ff24e560.png)<br/>
+# Power calculation in implemented model
 * Average currten: 98 n amps<br/>
 Dc voltage supplied: 0.8 V<br/>
 power=I(avg)*V(v)=98^-9 * 0.8=78.4 nW*<br/>
@@ -108,6 +111,11 @@ Block name - Number of BLock - Tansistor count - Transistor count for N block<br
 4bit_BtoE1 - 1 - 38 - 38<br/>
 Array of 5 2:1 MUX - 5 - 6 - 30<br/>
 ***Total transisitor count*** : **160+38+30=228**<br/>
+# Transistor and power comparison
+***Implsementented design*** - ***Transistor count*** - ***Power***<br/>
+*8bit_CSA_with_BtoE_converter* - *228* - *78.4 nW*<br/>
+***Reference design*** - ***Transistor count*** - ***Power***[1]<br/>
+*8bit_CSA_without_BtoE_converter*-*246* - 13.77uW<br/>
 # Netlist<br/>
 You can view the circuit netlists [here](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/tree/main/Netlist)<br/>
 # Author<br/>
@@ -117,7 +125,7 @@ Mahisha B M, BE in Electronic and Communication Engineering at R. M. K. Engineer
 [Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)<br/>
 [Synopsys India](https://www.synopsys.com/)<br/>
 # Reference <br/>
-http://www.ijeert.org/pdf/v2-i6/25.pdf <br/>
+[1] http://www.ijeert.org/pdf/v2-i6/25.pdf <br/>
 
 
 
