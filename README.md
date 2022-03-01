@@ -81,9 +81,10 @@ MUX_Array_Symbol<br/>
 8 bit input A<br/>
 ![8bit_csa(Ain)](https://user-images.githubusercontent.com/88282645/155845741-418740b2-d62a-4987-95d4-56ccf0be681e.png)<br/>
 8 bit input B<br/>
-![8bit_csa(Bin)](https://user-images.githubusercontent.com/88282645/155845754-3e8f63c0-198a-4e2e-a2a9-3f694773addf.png)<br/>
+![8bit_csa(Bin)](![8bit_csa(Bin)](https://user-images.githubusercontent.com/88282645/156198881-8ce77340-d317-4f0b-b592-aac24c0bd69f.png))<br/>
 8 bit Sum and 1 bit Cout<br/>
-![8bit_csa(result)](https://user-images.githubusercontent.com/88282645/155845755-388a555d-b946-4bca-91c8-63faa82b545b.png)<br/>
+![8bit_csa(result)](![8bit_csa(result)](https://user-images.githubusercontent.com/88282645/156198892-ffab5e79-7809-46d7-9cfb-9b914a00b993.png)
+)<br/>
 # Transistor Count for each block<br/>
 Block name                              -  Transistor Count<br/>
 [Inverter](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/edit/main/README.md#inverter)                            -  2<br/>
