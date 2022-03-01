@@ -166,7 +166,7 @@ xi0 a0 a1 a2 a3 a4 a5 a6 a7 b0 b1 b2 b3 b4 b5 b6 b7 cout gnd! s0 s1 s2 s3 s4 s5
 v2 net29 gnd! dc=.8
 v18 b7 gnd! dc=0 pulse ( 1.2 0 0 .1u .1u 256u 512u )
 v17 b0 gnd! dc=0 pulse ( 1.2 0 0 .1u .1u 2u 4u )
-v16 b1 gnd! dc=0 pulse ( 1.2 0 0 .1u .1u 4 8 )
+v16 b1 gnd! dc=0 pulse ( 1.2 0 0 .1u .1u 4u 8u )
 v15 b2 gnd! dc=0 pulse ( 1.20 0 0 .1u .1u 8u 16u )
 v14 b3 gnd! dc=0 pulse ( 1.20 0 0 .1u .1u 16u 32u )
 v13 b4 gnd! dc=0 pulse ( 1.2 0 0 .1u .1u 32u 64u )
