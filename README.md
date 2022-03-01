@@ -121,7 +121,7 @@ Array of 5 2:1 MUX - 5 - 6 - 30<br/>
 # Netlist<br/>
 You can view the circuit netlists [here](https://github.com/MahishaBM/8-bit-Carry-Select-Adder-with-Binary-to-Excess-One-Converter/tree/main/Netlist)<br/>
 # Author<br/>
-Mahisha B M, BE in Electronic and Communication Engineering at R. M. K. Engineering College, Thiruvallur-601206<br/>
+[Mahisha B M, BE in Electronic and Communication Engineering at R. M. K. Engineering College, Thiruvallur-601206,Tamil Nadu](https://www.linkedin.com/in/mahisha-b-m-83b1481b1?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BgqFbtRhLS0S9sqt7qiWArQ%3D%3D)<br/>
 # Acknowledgements <br/>
 [Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/)<br/>
 [Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)<br/>
