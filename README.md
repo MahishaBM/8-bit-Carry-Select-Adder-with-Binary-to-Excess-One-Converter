@@ -95,7 +95,7 @@ MUX_Array_Symbol<br/>
 # Power calculation in implemented model
 * Average currten: 98 n amps<br/>
 Dc voltage supplied: 0.8 V<br/>
-power=I(avg)*V(v)=98^-9 * 0.8=78.4 nW*<br/>
+power=I(avg)*V(v)=98 * 10^(-9) * 0.8=78.4 nW*<br/>
 
 # Transistor Count for each block<br/>
 Block name                              -  Transistor Count<br/>
